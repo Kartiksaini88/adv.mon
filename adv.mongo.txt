@@ -1,0 +1,961 @@
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("d9cc43fc-77e5-41a9-a4b5-bfa43a87ead4") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-03-07T16:53:27.308+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use Movies
+switched to db Movies
+> db.Movie.find({}).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af7652e9"),
+        "movie_name" : "Lonely Hearts",
+        "genre" : "Crime|Drama|Thriller",
+        "produce" : 1993,
+        "money" : "$4111.26"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ea"),
+        "movie_name" : "Two Ninas",
+        "genre" : "Comedy|Romance",
+        "produce" : 2004,
+        "money" : "$58877.50"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652eb"),
+        "movie_name" : "Praying with Lior",
+        "genre" : "Documentary",
+        "produce" : 1986,
+        "money" : "$52706.18"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ec"),
+        "movie_name" : "First Strike (Police Story 4: First Strike) (Ging chaat goo si 4: Ji gaan daan yam mo)",
+        "genre" : "Action|Adventure|Comedy|Thriller",
+        "produce" : 1968,
+        "money" : "$70853.82"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ed"),
+        "movie_name" : "War Witch (Rebelle)",
+        "genre" : "Drama|War",
+        "produce" : 1995,
+        "money" : "$30990.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ee"),
+        "movie_name" : "Music Man, The",
+        "genre" : "Comedy|Drama|Musical|Romance",
+        "produce" : 2000,
+        "money" : "$61195.04"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ef"),
+        "movie_name" : "Out for Justice",
+        "genre" : "Action|Crime|Drama|Thriller",
+        "produce" : 2004,
+        "money" : "$64958.87"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f0"),
+        "movie_name" : "Bridge, The",
+        "genre" : "Documentary",
+        "produce" : 2012,
+        "money" : "$23034.11"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f1"),
+        "movie_name" : "Chances Are",
+        "genre" : "Comedy|Romance",
+        "produce" : 2000,
+        "money" : "$28155.95"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f2"),
+        "movie_name" : "Crystal Fairy & the Magical Cactus and 2012",
+        "genre" : "Adventure|Comedy",
+        "produce" : 2012,
+        "money" : "$34843.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f3"),
+        "movie_name" : "Way of the Gun, The",
+        "genre" : "Crime|Thriller",
+        "produce" : 2007,
+        "money" : "$75881.29"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f4"),
+        "movie_name" : "Veronika Decides to Die",
+        "genre" : "Drama|Romance",
+        "produce" : 1970,
+        "money" : "$16377.03"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f5"),
+        "movie_name" : "Sleep Tight (Mientras duermes)",
+        "genre" : "Horror|Thriller",
+        "produce" : 2007,
+        "money" : "$44078.27"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f6"),
+        "movie_name" : "Summer Days With Coo",
+        "genre" : "Animation",
+        "produce" : 1993,
+        "money" : "$67778.25"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f7"),
+        "movie_name" : "P2",
+        "genre" : "Horror|Thriller",
+        "produce" : 2012,
+        "money" : "$54892.49"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f8"),
+        "movie_name" : "Princess Diaries, The",
+        "genre" : "Children|Comedy|Romance",
+        "produce" : 1986,
+        "money" : "$35750.83"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f9"),
+        "movie_name" : "Collector, The",
+        "genre" : "Drama|Horror|Thriller",
+        "produce" : 1988,
+        "money" : "$66854.37"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fa"),
+        "movie_name" : "G.I. Joe: Retaliation",
+        "genre" : "Action|Adventure|Sci-Fi|Thriller|IMAX",
+        "produce" : 2006,
+        "money" : "$34377.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fb"),
+        "movie_name" : "Aces and Eights",
+        "genre" : "Western",
+        "produce" : 1995,
+        "money" : "$27524.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fc"),
+        "movie_name" : "Duel at Diablo",
+        "genre" : "War",
+        "produce" : 2008,
+        "money" : "$16751.42"
+}
+Type "it" for more
+> db.Movie.find({"movie_name":{$eq:"Duel at Diablo"}}).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fc"),
+        "movie_name" : "Duel at Diablo",
+        "genre" : "War",
+        "produce" : 2008,
+        "money" : "$16751.42"
+}
+> db.Movie.find({"movie_name":{$ne:"Duel at Diablo"}}).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af7652e9"),
+        "movie_name" : "Lonely Hearts",
+        "genre" : "Crime|Drama|Thriller",
+        "produce" : 1993,
+        "money" : "$4111.26"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ea"),
+        "movie_name" : "Two Ninas",
+        "genre" : "Comedy|Romance",
+        "produce" : 2004,
+        "money" : "$58877.50"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652eb"),
+        "movie_name" : "Praying with Lior",
+        "genre" : "Documentary",
+        "produce" : 1986,
+        "money" : "$52706.18"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ec"),
+        "movie_name" : "First Strike (Police Story 4: First Strike) (Ging chaat goo si 4: Ji gaan daan yam mo)",
+        "genre" : "Action|Adventure|Comedy|Thriller",
+        "produce" : 1968,
+        "money" : "$70853.82"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ed"),
+        "movie_name" : "War Witch (Rebelle)",
+        "genre" : "Drama|War",
+        "produce" : 1995,
+        "money" : "$30990.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ee"),
+        "movie_name" : "Music Man, The",
+        "genre" : "Comedy|Drama|Musical|Romance",
+        "produce" : 2000,
+        "money" : "$61195.04"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ef"),
+        "movie_name" : "Out for Justice",
+        "genre" : "Action|Crime|Drama|Thriller",
+        "produce" : 2004,
+        "money" : "$64958.87"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f0"),
+        "movie_name" : "Bridge, The",
+        "genre" : "Documentary",
+        "produce" : 2012,
+        "money" : "$23034.11"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f1"),
+        "movie_name" : "Chances Are",
+        "genre" : "Comedy|Romance",
+        "produce" : 2000,
+        "money" : "$28155.95"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f2"),
+        "movie_name" : "Crystal Fairy & the Magical Cactus and 2012",
+        "genre" : "Adventure|Comedy",
+        "produce" : 2012,
+        "money" : "$34843.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f3"),
+        "movie_name" : "Way of the Gun, The",
+        "genre" : "Crime|Thriller",
+        "produce" : 2007,
+        "money" : "$75881.29"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f4"),
+        "movie_name" : "Veronika Decides to Die",
+        "genre" : "Drama|Romance",
+        "produce" : 1970,
+        "money" : "$16377.03"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f5"),
+        "movie_name" : "Sleep Tight (Mientras duermes)",
+        "genre" : "Horror|Thriller",
+        "produce" : 2007,
+        "money" : "$44078.27"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f6"),
+        "movie_name" : "Summer Days With Coo",
+        "genre" : "Animation",
+        "produce" : 1993,
+        "money" : "$67778.25"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f7"),
+        "movie_name" : "P2",
+        "genre" : "Horror|Thriller",
+        "produce" : 2012,
+        "money" : "$54892.49"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f8"),
+        "movie_name" : "Princess Diaries, The",
+        "genre" : "Children|Comedy|Romance",
+        "produce" : 1986,
+        "money" : "$35750.83"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f9"),
+        "movie_name" : "Collector, The",
+        "genre" : "Drama|Horror|Thriller",
+        "produce" : 1988,
+        "money" : "$66854.37"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fa"),
+        "movie_name" : "G.I. Joe: Retaliation",
+        "genre" : "Action|Adventure|Sci-Fi|Thriller|IMAX",
+        "produce" : 2006,
+        "money" : "$34377.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fb"),
+        "movie_name" : "Aces and Eights",
+        "genre" : "Western",
+        "produce" : 1995,
+        "money" : "$27524.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fd"),
+        "movie_name" : "The Smiling Ghost",
+        "genre" : "Comedy|Mystery",
+        "produce" : 1993,
+        "money" : "$30318.14"
+}
+Type "it" for more
+> db.Movie.find({$or:[{"produce":{$ne:2000}},{"money":{$ne:"$1000"}}]}).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af7652e9"),
+        "movie_name" : "Lonely Hearts",
+        "genre" : "Crime|Drama|Thriller",
+        "produce" : 1993,
+        "money" : "$4111.26"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ea"),
+        "movie_name" : "Two Ninas",
+        "genre" : "Comedy|Romance",
+        "produce" : 2004,
+        "money" : "$58877.50"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652eb"),
+        "movie_name" : "Praying with Lior",
+        "genre" : "Documentary",
+        "produce" : 1986,
+        "money" : "$52706.18"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ec"),
+        "movie_name" : "First Strike (Police Story 4: First Strike) (Ging chaat goo si 4: Ji gaan daan yam mo)",
+        "genre" : "Action|Adventure|Comedy|Thriller",
+        "produce" : 1968,
+        "money" : "$70853.82"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ed"),
+        "movie_name" : "War Witch (Rebelle)",
+        "genre" : "Drama|War",
+        "produce" : 1995,
+        "money" : "$30990.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ee"),
+        "movie_name" : "Music Man, The",
+        "genre" : "Comedy|Drama|Musical|Romance",
+        "produce" : 2000,
+        "money" : "$61195.04"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ef"),
+        "movie_name" : "Out for Justice",
+        "genre" : "Action|Crime|Drama|Thriller",
+        "produce" : 2004,
+        "money" : "$64958.87"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f0"),
+        "movie_name" : "Bridge, The",
+        "genre" : "Documentary",
+        "produce" : 2012,
+        "money" : "$23034.11"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f1"),
+        "movie_name" : "Chances Are",
+        "genre" : "Comedy|Romance",
+        "produce" : 2000,
+        "money" : "$28155.95"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f2"),
+        "movie_name" : "Crystal Fairy & the Magical Cactus and 2012",
+        "genre" : "Adventure|Comedy",
+        "produce" : 2012,
+        "money" : "$34843.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f3"),
+        "movie_name" : "Way of the Gun, The",
+        "genre" : "Crime|Thriller",
+        "produce" : 2007,
+        "money" : "$75881.29"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f4"),
+        "movie_name" : "Veronika Decides to Die",
+        "genre" : "Drama|Romance",
+        "produce" : 1970,
+        "money" : "$16377.03"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f5"),
+        "movie_name" : "Sleep Tight (Mientras duermes)",
+        "genre" : "Horror|Thriller",
+        "produce" : 2007,
+        "money" : "$44078.27"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f6"),
+        "movie_name" : "Summer Days With Coo",
+        "genre" : "Animation",
+        "produce" : 1993,
+        "money" : "$67778.25"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f7"),
+        "movie_name" : "P2",
+        "genre" : "Horror|Thriller",
+        "produce" : 2012,
+        "money" : "$54892.49"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f8"),
+        "movie_name" : "Princess Diaries, The",
+        "genre" : "Children|Comedy|Romance",
+        "produce" : 1986,
+        "money" : "$35750.83"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f9"),
+        "movie_name" : "Collector, The",
+        "genre" : "Drama|Horror|Thriller",
+        "produce" : 1988,
+        "money" : "$66854.37"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fa"),
+        "movie_name" : "G.I. Joe: Retaliation",
+        "genre" : "Action|Adventure|Sci-Fi|Thriller|IMAX",
+        "produce" : 2006,
+        "money" : "$34377.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fb"),
+        "movie_name" : "Aces and Eights",
+        "genre" : "Western",
+        "produce" : 1995,
+        "money" : "$27524.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fc"),
+        "movie_name" : "Duel at Diablo",
+        "genre" : "War",
+        "produce" : 2008,
+        "money" : "$16751.42"
+}
+Type "it" for more
+> db.Movie.find({}).sort({produce:-1},{movie_name:-1}).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af765312"),
+        "movie_name" : "Man with the Iron Fists, The",
+        "genre" : "Action|Adventure|Crime",
+        "produce" : 2013,
+        "money" : "$46359.79"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765325"),
+        "movie_name" : "Search for One-eye Jimmy, The",
+        "genre" : "Comedy",
+        "produce" : 2013,
+        "money" : "$63841.04"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765344"),
+        "movie_name" : "Densha otoko (Train Man)",
+        "genre" : "Comedy|Romance",
+        "produce" : 2013,
+        "money" : "$38859.43"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af76535f"),
+        "movie_name" : "Morgen",
+        "genre" : "Drama",
+        "produce" : 2013,
+        "money" : "$69866.83"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af76537b"),
+        "movie_name" : "Lemming",
+        "genre" : "Drama|Mystery|Thriller",
+        "produce" : 2013,
+        "money" : "$78351.22"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7653a7"),
+        "movie_name" : "Sunshine Cleaning",
+        "genre" : "Comedy|Drama",
+        "produce" : 2013,
+        "money" : "$4827.41"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af76553a"),
+        "movie_name" : "Man Who Knew Too Much, The",
+        "genre" : "Drama|Thriller",
+        "produce" : 2013,
+        "money" : "$41748.21"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7655a4"),
+        "movie_name" : "Net, The",
+        "genre" : "Action|Crime|Thriller",
+        "produce" : 2013,
+        "money" : "$56330.24"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7655b3"),
+        "movie_name" : "Wild Is the Wind",
+        "genre" : "Drama",
+        "produce" : 2013,
+        "money" : "$23640.66"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7655ea"),
+        "movie_name" : "Implanted",
+        "genre" : "Drama|Mystery|Sci-Fi|Thriller",
+        "produce" : 2013,
+        "money" : "$15093.35"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7655f6"),
+        "movie_name" : "Masquerade",
+        "genre" : "Mystery|Romance|Thriller",
+        "produce" : 2013,
+        "money" : "$12676.16"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765674"),
+        "movie_name" : "Alien Trespass",
+        "genre" : "Comedy|Sci-Fi",
+        "produce" : 2013,
+        "money" : "$86148.87"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f0"),
+        "movie_name" : "Bridge, The",
+        "genre" : "Documentary",
+        "produce" : 2012,
+        "money" : "$23034.11"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f2"),
+        "movie_name" : "Crystal Fairy & the Magical Cactus and 2012",
+        "genre" : "Adventure|Comedy",
+        "produce" : 2012,
+        "money" : "$34843.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f7"),
+        "movie_name" : "P2",
+        "genre" : "Horror|Thriller",
+        "produce" : 2012,
+        "money" : "$54892.49"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765309"),
+        "movie_name" : "Steppenwolf",
+        "genre" : "Drama",
+        "produce" : 2012,
+        "money" : "$77928.44"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af76530a"),
+        "movie_name" : "North Shore",
+        "genre" : "Drama|Romance",
+        "produce" : 2012,
+        "money" : "$22740.96"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765333"),
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "genre" : "Drama|Romance",
+        "produce" : 2012,
+        "money" : "$49879.82"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765336"),
+        "movie_name" : "Jane Eyre",
+        "genre" : "Drama",
+        "produce" : 2012,
+        "money" : "$87082.13"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af76533c"),
+        "movie_name" : "Brink of Life (Nära livet)",
+        "genre" : "Drama",
+        "produce" : 2012,
+        "money" : "$35143.43"
+}
+Type "it" for more
+> db.Movie.find({$or:[{"produce":{$gt:1999}},{"produce":{$lt:2011}}]}).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af7652e9"),
+        "movie_name" : "Lonely Hearts",
+        "genre" : "Crime|Drama|Thriller",
+        "produce" : 1993,
+        "money" : "$4111.26"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ea"),
+        "movie_name" : "Two Ninas",
+        "genre" : "Comedy|Romance",
+        "produce" : 2004,
+        "money" : "$58877.50"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652eb"),
+        "movie_name" : "Praying with Lior",
+        "genre" : "Documentary",
+        "produce" : 1986,
+        "money" : "$52706.18"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ec"),
+        "movie_name" : "First Strike (Police Story 4: First Strike) (Ging chaat goo si 4: Ji gaan daan yam mo)",
+        "genre" : "Action|Adventure|Comedy|Thriller",
+        "produce" : 1968,
+        "money" : "$70853.82"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ed"),
+        "movie_name" : "War Witch (Rebelle)",
+        "genre" : "Drama|War",
+        "produce" : 1995,
+        "money" : "$30990.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ee"),
+        "movie_name" : "Music Man, The",
+        "genre" : "Comedy|Drama|Musical|Romance",
+        "produce" : 2000,
+        "money" : "$61195.04"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ef"),
+        "movie_name" : "Out for Justice",
+        "genre" : "Action|Crime|Drama|Thriller",
+        "produce" : 2004,
+        "money" : "$64958.87"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f0"),
+        "movie_name" : "Bridge, The",
+        "genre" : "Documentary",
+        "produce" : 2012,
+        "money" : "$23034.11"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f1"),
+        "movie_name" : "Chances Are",
+        "genre" : "Comedy|Romance",
+        "produce" : 2000,
+        "money" : "$28155.95"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f2"),
+        "movie_name" : "Crystal Fairy & the Magical Cactus and 2012",
+        "genre" : "Adventure|Comedy",
+        "produce" : 2012,
+        "money" : "$34843.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f3"),
+        "movie_name" : "Way of the Gun, The",
+        "genre" : "Crime|Thriller",
+        "produce" : 2007,
+        "money" : "$75881.29"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f4"),
+        "movie_name" : "Veronika Decides to Die",
+        "genre" : "Drama|Romance",
+        "produce" : 1970,
+        "money" : "$16377.03"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f5"),
+        "movie_name" : "Sleep Tight (Mientras duermes)",
+        "genre" : "Horror|Thriller",
+        "produce" : 2007,
+        "money" : "$44078.27"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f6"),
+        "movie_name" : "Summer Days With Coo",
+        "genre" : "Animation",
+        "produce" : 1993,
+        "money" : "$67778.25"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f7"),
+        "movie_name" : "P2",
+        "genre" : "Horror|Thriller",
+        "produce" : 2012,
+        "money" : "$54892.49"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f8"),
+        "movie_name" : "Princess Diaries, The",
+        "genre" : "Children|Comedy|Romance",
+        "produce" : 1986,
+        "money" : "$35750.83"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f9"),
+        "movie_name" : "Collector, The",
+        "genre" : "Drama|Horror|Thriller",
+        "produce" : 1988,
+        "money" : "$66854.37"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fa"),
+        "movie_name" : "G.I. Joe: Retaliation",
+        "genre" : "Action|Adventure|Sci-Fi|Thriller|IMAX",
+        "produce" : 2006,
+        "money" : "$34377.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fb"),
+        "movie_name" : "Aces and Eights",
+        "genre" : "Western",
+        "produce" : 1995,
+        "money" : "$27524.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fc"),
+        "movie_name" : "Duel at Diablo",
+        "genre" : "War",
+        "produce" : 2008,
+        "money" : "$16751.42"
+}
+Type "it" for more
+> db.Movie.find({}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f3"),
+        "movie_name" : "Way of the Gun, The",
+        "genre" : "Crime|Thriller",
+        "produce" : 2007,
+        "money" : "$75881.29"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f4"),
+        "movie_name" : "Veronika Decides to Die",
+        "genre" : "Drama|Romance",
+        "produce" : 1970,
+        "money" : "$16377.03"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f5"),
+        "movie_name" : "Sleep Tight (Mientras duermes)",
+        "genre" : "Horror|Thriller",
+        "produce" : 2007,
+        "money" : "$44078.27"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f6"),
+        "movie_name" : "Summer Days With Coo",
+        "genre" : "Animation",
+        "produce" : 1993,
+        "money" : "$67778.25"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f7"),
+        "movie_name" : "P2",
+        "genre" : "Horror|Thriller",
+        "produce" : 2012,
+        "money" : "$54892.49"
+}
+> db.Movie.find({$and:[{"produce":{$gt:2000}},{"money":{$gt:"$1000"}}]}).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ea"),
+        "movie_name" : "Two Ninas",
+        "genre" : "Comedy|Romance",
+        "produce" : 2004,
+        "money" : "$58877.50"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652ef"),
+        "movie_name" : "Out for Justice",
+        "genre" : "Action|Crime|Drama|Thriller",
+        "produce" : 2004,
+        "money" : "$64958.87"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f0"),
+        "movie_name" : "Bridge, The",
+        "genre" : "Documentary",
+        "produce" : 2012,
+        "money" : "$23034.11"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f2"),
+        "movie_name" : "Crystal Fairy & the Magical Cactus and 2012",
+        "genre" : "Adventure|Comedy",
+        "produce" : 2012,
+        "money" : "$34843.32"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f3"),
+        "movie_name" : "Way of the Gun, The",
+        "genre" : "Crime|Thriller",
+        "produce" : 2007,
+        "money" : "$75881.29"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f5"),
+        "movie_name" : "Sleep Tight (Mientras duermes)",
+        "genre" : "Horror|Thriller",
+        "produce" : 2007,
+        "money" : "$44078.27"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f7"),
+        "movie_name" : "P2",
+        "genre" : "Horror|Thriller",
+        "produce" : 2012,
+        "money" : "$54892.49"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fa"),
+        "movie_name" : "G.I. Joe: Retaliation",
+        "genre" : "Action|Adventure|Sci-Fi|Thriller|IMAX",
+        "produce" : 2006,
+        "money" : "$34377.51"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652fc"),
+        "movie_name" : "Duel at Diablo",
+        "genre" : "War",
+        "produce" : 2008,
+        "money" : "$16751.42"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765300"),
+        "movie_name" : "Preaching to the Perverted",
+        "genre" : "Comedy|Drama",
+        "produce" : 2011,
+        "money" : "$9114.99"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765301"),
+        "movie_name" : "Good bye, Lenin!",
+        "genre" : "Comedy|Drama",
+        "produce" : 2010,
+        "money" : "$36341.22"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765303"),
+        "movie_name" : "Guadalcanal Diary",
+        "genre" : "Action|War",
+        "produce" : 2005,
+        "money" : "$26041.92"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765306"),
+        "movie_name" : "Clearing, The",
+        "genre" : "Drama|Thriller",
+        "produce" : 2005,
+        "money" : "$7888.25"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765307"),
+        "movie_name" : "National Theatre Live: Frankenstein",
+        "genre" : "Drama|Fantasy",
+        "produce" : 2004,
+        "money" : "$45641.79"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765308"),
+        "movie_name" : "Young Detective Dee: Rise of the Sea Dragon (Di Renjie: Shen du long wang)",
+        "genre" : "Action|Adventure|Drama|Fantasy|Mystery|IMAX",
+        "produce" : 2007,
+        "money" : "$84455.68"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765309"),
+        "movie_name" : "Steppenwolf",
+        "genre" : "Drama",
+        "produce" : 2012,
+        "money" : "$77928.44"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af76530a"),
+        "movie_name" : "North Shore",
+        "genre" : "Drama|Romance",
+        "produce" : 2012,
+        "money" : "$22740.96"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af76530b"),
+        "movie_name" : "End of Violence, The",
+        "genre" : "Drama|Thriller",
+        "produce" : 2004,
+        "money" : "$82242.07"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765310"),
+        "movie_name" : "Very Brady Sequel, A",
+        "genre" : "Comedy",
+        "produce" : 2004,
+        "money" : "$32871.76"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af765311"),
+        "movie_name" : "Garfield: A Tail of Two Kitties",
+        "genre" : "Animation|Children|Comedy",
+        "produce" : 2011,
+        "money" : "$72112.73"
+}
+Type "it" for more
+> db.Movie.find({}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f3"),
+        "movie_name" : "Way of the Gun, The",
+        "genre" : "Crime|Thriller",
+        "produce" : 2007,
+        "money" : "$75881.29"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f4"),
+        "movie_name" : "Veronika Decides to Die",
+        "genre" : "Drama|Romance",
+        "produce" : 1970,
+        "money" : "$16377.03"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f5"),
+        "movie_name" : "Sleep Tight (Mientras duermes)",
+        "genre" : "Horror|Thriller",
+        "produce" : 2007,
+        "money" : "$44078.27"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f6"),
+        "movie_name" : "Summer Days With Coo",
+        "genre" : "Animation",
+        "produce" : 1993,
+        "money" : "$67778.25"
+}
+{
+        "_id" : ObjectId("62278d952707a6b6af7652f7"),
+        "movie_name" : "P2",
+        "genre" : "Horror|Thriller",
+        "produce" : 2012,
+        "money" : "$54892.49"
+}
+>
